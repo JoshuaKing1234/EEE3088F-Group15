@@ -3,8 +3,8 @@ Qty           Value                                   Cost            Extended P
 1             MMBT3904                                0.0106          0                         0.0106
 1             QMB-09B-03                              0.1326          1                         0.1326
 5             CL21A475KKAQNNNE                        0.0112          0                         0.056
-5             C0805X104K101TB                         0.0212          1                         0.1056
+20            C0805X104K101TB                         0.0212          1                         0.424
 5             0402WGF1002TCE                          0.0006          0                         0.003
-10            KT-0603R (LED)                          0.0054          0                         0.054                                                                       
+20            KT-0603R (LED)                          0.0054          0                         0.108                                                                       
                                                                                     
-                                                                                          Final cost  20.0768
+                                                                                          Final cost  20.4492
