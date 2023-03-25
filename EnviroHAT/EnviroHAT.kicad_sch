@@ -1,0 +1,71 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid a74e31c2-fcf5-43a5-9331-08916f60248b)
+
+  (paper "A4")
+
+  (title_block
+    (title "Enviro Sensing HAT")
+    (date "2023-03-21")
+    (rev "5.1")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 110.49 55.88) (size 27.94 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 165e1195-d79e-4072-af51-99c852762441)
+    (property "Sheetname" "Sensing Submodule" (at 110.49 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Sensing Submodule.kicad_sch" (at 110.49 74.2446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "EnviroHAT"
+        (path "/a74e31c2-fcf5-43a5-9331-08916f60248b" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 76.2 55.88) (size 30.48 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 1f29c7bb-3a0b-4611-ad74-2baaa71e5961)
+    (property "Sheetname" "MCU Submodule" (at 76.2 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "MCU Submodule.kicad_sch" (at 76.2 74.2446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "EnviroHAT"
+        (path "/a74e31c2-fcf5-43a5-9331-08916f60248b" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 76.2 80.01) (size 30.48 19.05) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 2be14b9c-d14d-472f-bc9b-c8a5f77e7f2d)
+    (property "Sheetname" "Power Management Submodule" (at 76.2 79.2984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Power Management Submodule.kicad_sch" (at 76.2 99.6446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "EnviroHAT"
+        (path "/a74e31c2-fcf5-43a5-9331-08916f60248b" (page "4"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
