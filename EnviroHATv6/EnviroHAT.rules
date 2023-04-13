@@ -1,0 +1,97 @@
+
+(rules PCB EnviroHAT
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 500)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.0)
+    (clear 125.0 (type smd_to_turn_gap))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    +3V3 AOUT "USB_Detect" "Net-(U5-SS)" "Net-(D5-K)" "Net-(D5-A)" "Net-(D6-K)" "Net-(D6-A)"
+    "Net-(D7-K)" "Net-(D7-A)" "DIG_OUT" +3.3V "Sensor_GPIO1" "Net-(BT1-+)" "Sensor_SCL" "Sensor_SDA"
+    "Net-(U5-NTC)" USBDN USBDP "Net-(U5-IBF)" "Net-(U5-ISET)" "/MCU Submodule/USART FTDI RTS" "/MCU Submodule/USART FTDI CTS" "/MCU Submodule/USART FTDI RXD"
+    "/MCU Submodule/USART FTDI TXD" "/MCU Submodule/MEM SCL" "/MCU Submodule/MEM SDA" "/MCU Submodule/CBUS0" "unconnected-(U4-NC-PadP$3)" "Net-(U7-VOUT)" "Net-(Q4-E)" "Net-(U6-VO)"
+    +5V "/Sensing Submodule/GPIO1" "Net-(U4-SDA)" "Net-(U4-SCL)" "unconnected-(J3-Pin_2-Pad2)" "unconnected-(J3-Pin_3-Pad3)" "unconnected-(J3-Pin_4-Pad4)" "unconnected-(J3-Pin_5-Pad5)"
+    "unconnected-(J3-Pin_6-Pad6)" "unconnected-(J3-Pin_7-Pad7)" "unconnected-(J3-Pin_8-Pad8)" "unconnected-(J3-Pin_9-Pad9)" "unconnected-(J3-Pin_10-Pad10)" "unconnected-(J3-Pin_11-Pad11)" "unconnected-(J3-Pin_12-Pad12)" "unconnected-(J3-Pin_13-Pad13)"
+    "unconnected-(J3-Pin_14-Pad14)" "unconnected-(J3-Pin_15-Pad15)" "unconnected-(J3-Pin_16-Pad16)" "unconnected-(J3-Pin_17-Pad17)" "unconnected-(J3-Pin_18-Pad18)" "unconnected-(J3-Pin_19-Pad19)" "unconnected-(J3-Pin_22-Pad22)" "unconnected-(J3-Pin_23-Pad23)"
+    "unconnected-(J3-Pin_25-Pad25)" "unconnected-(J3-Pin_27-Pad27)" "unconnected-(J3-Pin_28-Pad28)" "unconnected-(J3-Pin_29-Pad29)" "unconnected-(J3-Pin_30-Pad30)" "unconnected-(J3-Pin_31-Pad31)" "Net-(D1-K)" "Net-(D1-A)"
+    "Net-(D2-K)" "Net-(D2-A)" "unconnected-(J2-Pin_1-Pad1)" "unconnected-(J2-Pin_4-Pad4)" "unconnected-(J2-Pin_5-Pad5)" "unconnected-(J2-Pin_6-Pad6)" "unconnected-(J2-Pin_7-Pad7)" "unconnected-(J2-Pin_8-Pad8)"
+    "unconnected-(J2-Pin_10-Pad10)" "unconnected-(J2-Pin_12-Pad12)" "unconnected-(J2-Pin_13-Pad13)" "unconnected-(J2-Pin_14-Pad14)" "unconnected-(J2-Pin_19-Pad19)" "unconnected-(J2-Pin_20-Pad20)" "unconnected-(J2-Pin_21-Pad21)" "unconnected-(J2-Pin_22-Pad22)"
+    "unconnected-(J2-Pin_23-Pad23)" "unconnected-(J2-Pin_24-Pad24)" "unconnected-(J2-Pin_25-Pad25)" "unconnected-(J2-Pin_26-Pad26)" "unconnected-(J2-Pin_27-Pad27)" "unconnected-(J2-Pin_28-Pad28)" "unconnected-(J2-Pin_29-Pad29)" "Net-(J4-VBUS)"
+    "Net-(J4-D-)" "Net-(J4-D+)" +BATT
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "GND_class"
+    GND
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
