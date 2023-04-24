@@ -1733,7 +1733,7 @@
   )
 
   (symbol (lib_id "Device:Battery") (at 106.68 137.16 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 095f4e4e-7360-43c9-ae2b-f6690e156aeb)
     (property "Reference" "BT1" (at 110.49 136.144 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1741,7 +1741,7 @@
     (property "Value" "BH-18650-B1BA002" (at 110.49 138.684 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "footprints:18650_HOLDER_TH" (at 106.68 135.636 90)
+    (property "Footprint" "footprints:18650_Holder_SMD" (at 106.68 135.636 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 106.68 135.636 90)
